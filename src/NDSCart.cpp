@@ -402,11 +402,11 @@ CartRetail::CartRetail(std::unique_ptr<u8[]>&& rom, u32 len, u32 chipid, bool ba
     u32 savememtype = ROMParams.SaveMemType <= 10 ? ROMParams.SaveMemType : 0;
     constexpr int sramlengths[] =
     {
-        0,
-        512,
-        8192, 65536, 128*1024,
-        256*1024, 512*1024, 1024*1024,
-        8192*1024, 16384*1024, 65536*1024
+        512*1024,	//	hacky but may work
+        512*1024,
+        512*1024,
+        512*1024,
+        512*1024
     };
     SRAMLength = sramlengths[savememtype];
 
@@ -526,7 +526,7 @@ int CartRetail::ROMCommandStart(NDS& nds, NDSCart::NDSCartSlot& cartslot, const 
 
 u8 CartRetail::SPIWrite(u8 val, u32 pos, bool last)
 {
-    if (SRAMType == 0) return 0;
+    if (SRAMType == 0) return SRAMWrite_FLASH(val, pos, last);
 
     if (pos == 0)
     {

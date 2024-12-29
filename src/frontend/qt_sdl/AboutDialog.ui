@@ -23,7 +23,7 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>About melonDS</string>
+   <string>About melonDS BWMod</string>
   </property>
   <property name="modal">
    <bool>false</bool>
@@ -108,7 +108,7 @@
           </font>
          </property>
          <property name="text">
-          <string>melonDS</string>
+          <string>melonDS BWMod</string>
          </property>
         </widget>
        </item>
@@ -131,7 +131,20 @@
           <bool>true</bool>
          </property>
          <property name="text">
-          <string>By Arisotura, the melonDS team &lt;a href=&quot;https://github.com/melonDS-emu/melonDS/graphs/contributors&quot;&gt;and contributors&lt;/a&gt;.</string>
+          <string>Created by MDTravis. Purpose is to get past Pokemon BW builds without having some sort of SRAM error.</string>
+         </property>
+         <property name="openExternalLinks">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>MelonDS is by Arisotura, the melonDS team &lt;a href=&quot;https://github.com/melonDS-emu/melonDS/graphs/contributors&quot;&gt;and contributors&lt;/a&gt;.</string>
          </property>
          <property name="openExternalLinks">
           <bool>true</bool>
